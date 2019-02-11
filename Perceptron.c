@@ -38,6 +38,7 @@ int main(void) {
 
     if (novoy == y[i]){
       acerto = acerto + 1;
+      
     }
   }
 fclose(arquivo);
@@ -45,8 +46,8 @@ fclose(arquivo);
     printf("Quantidade de acertos : %.0lf\n", acerto);
     printf("Porcetagem de acertos : %.3lf%%\n\n ", porcentagem);
 
-    printf("novo w1 = %lf\n",w1);
-    printf("novo w2 = %lf\n",w2); 
-    printf("novo w3 =%lf\n", w3);
+    printf("\n novo w1 = %lf\n",w1);
+    printf(" novo w2 = %lf\n",w2); 
+    printf(" novo w3 = %lf\n", w3);
 return 0;
 }
