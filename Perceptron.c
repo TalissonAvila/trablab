@@ -22,7 +22,8 @@ int main(void) {
   
   while(fgets(linha, 100, arquivo) != NULL){
         fscanf(arquivo,"%lf %lf %lf", &x1[i], &x2[i], &y[i]);
-        i++;
+        i++;}
+    while(cont <= 30){
 
     ProdutoInterno = x1[i] * w1 + x2[i] * w2 + x3 *w3;
     
@@ -32,6 +33,9 @@ int main(void) {
     } else novoy = 0;
 
     erro = y[i] - novoy;
+    if (erro == 0){
+      cont++;
+    } else cont = 0;
     w1 = w1 + (alfa * erro * x1[i]);
     w2 = w2 + (alfa * erro * x2[i]);
     w3 = w3 + (alfa * erro * x3);
@@ -40,7 +44,8 @@ int main(void) {
       acerto = acerto + 1;
       
     }
-  }
+    
+    }
 fclose(arquivo);
     porcentagem = (acerto / 30) * 100;
     printf("Quantidade de acertos : %.0lf\n", acerto);
