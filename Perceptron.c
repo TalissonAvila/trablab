@@ -4,8 +4,8 @@
 
 int main(void) {
   int  novoy, cont, i;
-  double x1[30], x2[30],y[30], w1, w2, x3, w3;
-  double ProdutoInterno,acerto,porcentagem, alfa, erro;
+  float x1[30], x2[30],y[30], w1, w2, x3, w3;
+  float ProdutoInterno,acerto,porcentagem, alfa, erro;
   char linha[100];
   
   w1 = 0.5;
@@ -21,7 +21,7 @@ int main(void) {
 	      }
   
   while(fgets(linha, 100, arquivo) != NULL){
-        fscanf(arquivo,"%lf %lf %lf", &x1[i], &x2[i], &y[i]);
+        fscanf(arquivo,"%f %f %f", &x1[i], &x2[i], &y[i]);
         i++;}
     while(cont <= 30){
 
@@ -48,11 +48,11 @@ int main(void) {
     }
 fclose(arquivo);
     porcentagem = (acerto / 30) * 100;
-    printf("Quantidade de acertos : %.0lf\n", acerto);
-    printf("Porcetagem de acertos : %.3lf%%\n\n ", porcentagem);
+    printf("Quantidade de acertos : %.0f\n", acerto);
+    printf("Porcetagem de acertos : %.3f%%\n\n ", porcentagem);
 
-    printf("\n novo w1 = %lf\n",w1);
-    printf(" novo w2 = %lf\n",w2); 
-    printf(" novo w3 = %lf\n", w3);
+    printf("\n novo w1 = %f\n",w1);
+    printf(" novo w2 = %f\n",w2); 
+    printf(" novo w3 = %f\n", w3);
 return 0;
 }
