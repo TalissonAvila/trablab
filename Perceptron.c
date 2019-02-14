@@ -2,17 +2,18 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
-
+#define TAM 30
 int main(void) {
   int  novoy, cont,i,escolha;
-  float x1[30], x2[30],y[30], w1, w2, x3, w3;
+  float x1[TAM], x2[TAM],y[TAM], w1, w2, x3, w3;
   float ProdutoInterno,acerto,porcentagem, alfa, erro;
   char linha[100];
 
+
   srand(time(NULL));
-  w1 = rand() % 20 - 10;
-  w2 = rand() % 20 - 10;
-  w3 = rand() % 20 - 10;
+  w1 = rand() % 2 - 1;
+  w2 = rand() % 2 - 1;
+  w3 = rand() % 2 - 1;
   x3 = 1.0;
   alfa = 0.01;
   acerto = 0;
@@ -39,7 +40,7 @@ int main(void) {
 
   do{
     cont = 0;
-    for (i = 0;i < 30;i++){
+    for (i = 0;i < TAM;i++){
 
       ProdutoInterno = x1[i] * w1 + x2[i] * w2 + x3 *w3;
       
@@ -58,15 +59,15 @@ int main(void) {
       
     }
   }
-  while(cont < 30);
+  while(cont < TAM);
 
-  porcentagem = (cont / 30) * 100;
-  printf("\n\nQuantidade de acertos : %d\n", cont);
-  printf("Porcetagem de acertos : %.3f%%\n\n ", porcentagem);
+  porcentagem = (cont / TAM) * 100;
+  printf("\n\nAcertos da aprendizagem : %d\n", cont);
+  printf("Porcetagem de acertos da aprendizagem : %.3f%%\n\n ", porcentagem);
 
-  printf("\n novo w1 = %f\n",w1);
-  printf(" novo w2 = %f\n",w2); 
-  printf(" novo w3 = %f\n", w3);
+  printf("\n W1 da aprendizagem = %f\n",w1);
+  printf(" W2 da aprendizagem = %f\n",w2); 
+  printf(" W3 da aprendizagem = %f\n", w3);
   break;
   case 2 :
   arquivo = fopen("B_l.txt","r");
@@ -83,7 +84,7 @@ int main(void) {
 
   do{
     cont = 0;
-    for (i = 0;i < 30;i++){
+    for (i = 0;i < TAM;i++){
 
       ProdutoInterno = x1[i] * w1 + x2[i] * w2 + x3 *w3;
       
@@ -102,15 +103,15 @@ int main(void) {
       
     }
   }
-  while(cont < 30);
+  while(cont < TAM);
 
-  porcentagem = (cont / 30) * 100;
-  printf("\n\nQuantidade de acertos : %d\n", cont);
-  printf("Porcetagem de acertos : %.3f%%\n\n ", porcentagem);
+  porcentagem = (cont / TAM) * 100;
+  printf("\n\nAcertos da aprendizagem : %d\n", cont);
+  printf("Porcetagem de acertos da aprendizagem : %.3f%%\n\n ", porcentagem);
 
-  printf("\n novo w1 = %f\n",w1);
-  printf(" novo w2 = %f\n",w2); 
-  printf(" novo w3 = %f\n", w3);
+  printf("\n W1 da aprendizagem = %f\n",w1);
+  printf(" W2 da aprendizagem = %f\n",w2); 
+  printf(" W3 da aprendizagem = %f\n", w3);
   break;
   }
   
