@@ -129,6 +129,9 @@ int main(void) {
     porcentagem = (acerto / 30) * 100;
     printf("Quantidade de acertos do teste : %.0f\n", acerto);
     printf("Porcetagem de acertos do teste: %.3f%%\n\n ", porcentagem);
+    printf("\nw1 final do teste = %f\n",ww1);
+    printf("w2 final do teste = %f\n",ww2);
+    printf("w3 final do teste = %f\n\n\n\n",ww3);
   break;
   
 /*aqui inicia-se o caso 2 do switch, a partir de agora é tudo exatamente igual ao anterior, com diferença apenas nos arquivos que ele vai ler, vai usar agora a base B, vai aprender e realizar os mesmos procedimentos*/
@@ -217,6 +220,9 @@ int main(void) {
     porcentagem = (acerto / 30) * 100;
     printf("Quantidade de acertos do teste : %.0f\n", acerto);
     printf("Porcetagem de acertos do teste: %.3f%%\n\n ", porcentagem);
+    printf("\nw1 final do teste = %f\n",ww1);
+    printf("w2 final do teste = %f\n",ww2);
+    printf("w3 final do teste = %f\n\n\n\n",ww3);
   break;
   }
   
